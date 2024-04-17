@@ -4,14 +4,14 @@ from memory.models import GoodMemory, BadMemory, Image
 class GoodMemorySerializer(serializers.ModelSerializer):
     class Meta:
         model = GoodMemory
-        fields = ('weather', 'comment', 'attendents', 'location', 'season', 'country', 'date', 'image')
+        fields = ('id', 'title', 'weather', 'comment', 'attendents', 'location', 'season', 'country', 'date', 'image')
 
 class BadMemorySerializer(serializers.ModelSerializer):
     class Meta:
         model = BadMemory
-        fields = ('weather', 'comment', 'attendents', 'location', 'season', 'country', 'date',  'image')
+        fields = ('id', 'title', 'weather', 'comment', 'attendents', 'location', 'season', 'country', 'date', 'image')
         
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Image
-        fields = ['image']
+        fields = ['id', 'image']

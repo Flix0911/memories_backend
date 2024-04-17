@@ -13,6 +13,9 @@ class GoodMemory(models.Model):
     date= models.DateField()
     image = models.ImageField()
     
+    def __str__(self):
+        return self.title
+    
 class BadMemory(models.Model):
     title = models.CharField(max_length=100)
     weather = models.CharField(max_length=150)
@@ -24,5 +27,11 @@ class BadMemory(models.Model):
     date= models.DateField()
     image = models.ImageField()
     
+    def __str__(self):
+        return self.title
+    
 class Image(models.Model):
     image = models.ImageField()
+
+    def __str__(self):
+        return self.image
